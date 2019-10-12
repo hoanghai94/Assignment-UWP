@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>7697c9f7-47de-4251-86f6-b40b25733d28</PackageIdentityName>
     <PackageIdentityPublisher>CN=Admin</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Admin\source\repos\HelloUWP\HelloUWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\HelloUWP.exe">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\HelloUWP.exe">
       <PackagePath>entrypoint\HelloUWP.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\newtonsoft.json\12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll">
@@ -37,73 +37,76 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\HelloUWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\HelloUWP.xr.xml">
       <PackagePath>HelloUWP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\Pages\FileHandle.xbf">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\FileHandle.xbf">
       <PackagePath>Pages\FileHandle.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\Pages\Information.xbf">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\Information.xbf">
       <PackagePath>Pages\Information.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\Pages\ListSong.xbf">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\ListSong.xbf">
       <PackagePath>Pages\ListSong.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\Pages\Login.xbf">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\Login.xbf">
       <PackagePath>Pages\Login.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\Pages\MasterLayout.xbf">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\MasterLayout.xbf">
       <PackagePath>Pages\MasterLayout.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\Pages\Register.xbf">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\MySong.xbf">
+      <PackagePath>Pages\MySong.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\Register.xbf">
       <PackagePath>Pages\Register.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\Pages\SongForm.xbf">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\SongForm.xbf">
       <PackagePath>Pages\SongForm.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Admin\source\repos\HelloUWP\HelloUWP\bin\x86\Debug\Core\HelloUWP.exe">
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Core\HelloUWP.exe">
       <PackagePath>HelloUWP.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

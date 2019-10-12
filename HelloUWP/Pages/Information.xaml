@@ -9,18 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ScrollViewer Margin="30">
-            <StackPanel>
-                <Image x:Name="ImageControl" Margin="0,10" Width="200" Height="200"/>
-                <TextBlock x:Name="FirstName" />
-                <TextBlock x:Name="LastName" />
-                <TextBlock x:Name="Phone" />
-                <TextBlock x:Name="Gender" />
-                <TextBlock x:Name="Birthday" />
-                <TextBlock x:Name="Email" />
-                <TextBlock x:Name="Introduction" />
-                <TextBlock x:Name="Address" />
-            </StackPanel>
-        </ScrollViewer>
+        <StackPanel HorizontalAlignment="Center">
+            <PersonPicture x:Name="Avatar" Margin="0,20,0,20"></PersonPicture>
+            <ListBox Width="500">
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"><Bold>Name:</Bold><Span><Run x:Name="Name"></Run></Span></TextBlock>
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"><Bold>Birthday:</Bold><Span><Run x:Name="Birthday"></Run></Span></TextBlock>
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"><Bold>Phone:</Bold><Span><Run x:Name="Phone"></Run></Span></TextBlock>
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"><Bold>Email:</Bold><Span><Run x:Name="Email"></Run></Span></TextBlock>
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"><Bold>Gender:</Bold><Span><Run x:Name="Gender"></Run></Span></TextBlock>
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"><Bold>Address:</Bold><Span><Run x:Name="Address"></Run></Span></TextBlock>
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"><Bold>Introduction:</Bold><Span><Run x:Name="Introduction"></Run></Span></TextBlock>
+            </ListBox>
+        </StackPanel>
     </Grid>
 </Page>

@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.ApplicationModel.Payments;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -24,14 +23,14 @@ namespace HelloUWP.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ListSong : Page
+    public sealed partial class MySong : Page
     {
         private ISongService songService;
         private bool _isPlaying;
         private int _currentIndex = 0;
         private ObservableCollection<Song> _songs;
 
-        public ListSong()
+        public MySong()
         {
             this.InitializeComponent();
             songService = new SongServiceIpm();
@@ -40,7 +39,7 @@ namespace HelloUWP.Pages
 
         private void LoadSongs()
         {
-            _songs = songService.GetFreeSongs();
+            _songs = songService.GetMySongs();
             MyListSong.ItemsSource = _songs;
             _currentIndex = 0;
         }
@@ -58,6 +57,20 @@ namespace HelloUWP.Pages
                     Play();
                 }
             }
+        }
+
+        private void PreviousButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            _currentIndex--;
+            if (_currentIndex < 0)
+            {
+                _currentIndex = _songs.Count - 1;
+            }
+            else if (_currentIndex >= _songs.Count)
+            {
+                _currentIndex = 0;
+            }
+            Play();
         }
 
         private void StatusButton_OnClick(object sender, RoutedEventArgs e)
@@ -88,20 +101,6 @@ namespace HelloUWP.Pages
             MyMediaPlayer.Pause();
             StatusButton.Icon = new SymbolIcon(Symbol.Play);
             _isPlaying = false;
-        }
-
-        private void PreviousButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            _currentIndex--;
-            if (_currentIndex < 0)
-            {
-                _currentIndex = _songs.Count - 1;
-            }
-            else if (_currentIndex >= _songs.Count)
-            {
-                _currentIndex = 0;
-            }
-            Play();
         }
 
         private void NextButton_OnClick(object sender, RoutedEventArgs e)

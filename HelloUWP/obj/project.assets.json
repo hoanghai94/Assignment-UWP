@@ -8259,11 +8259,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\HelloUWP\\HelloUWP\\HelloUWP.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Assignment-UWP\\HelloUWP\\HelloUWP.csproj",
       "projectName": "HelloUWP",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\HelloUWP\\HelloUWP\\HelloUWP.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\Assignment-UWP\\HelloUWP\\HelloUWP.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\HelloUWP\\HelloUWP\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\Assignment-UWP\\HelloUWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

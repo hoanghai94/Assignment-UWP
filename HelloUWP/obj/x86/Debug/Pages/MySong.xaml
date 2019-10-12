@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="HelloUWP.Pages.ListSong"
+    x:Class="HelloUWP.Pages.MySong"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:HelloUWP.Pages"
@@ -12,18 +12,18 @@
     <Grid>
         <ScrollViewer>
             <StackPanel>
-                <ListView x:Name="MyListSong">
+                <ListView x:ConnectionId='7' x:Name="MyListSong">
                     <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="entity:Song">
-                            <StackPanel HorizontalAlignment="Stretch" Tapped="SelectSong" Margin="0,10,0,10" Orientation="Horizontal" Tag="{Binding}">
+                        <DataTemplate                         >
+                            <StackPanel x:ConnectionId='9' HorizontalAlignment="Stretch"                     Margin="0,10,0,10" Orientation="Horizontal" Tag="{Binding}">
                                 <Ellipse Width="77" Height="77">
                                     <Ellipse.Fill>
-                                        <ImageBrush ImageSource="{x:Bind thumbnail}"></ImageBrush>
+                                        <ImageBrush x:ConnectionId='12'                                 ></ImageBrush>
                                     </Ellipse.Fill>
                                 </Ellipse>
                                 <StackPanel Margin="10,10,0,0">
-                                    <TextBlock Text="{x:Bind name}" Style="{ThemeResource BaseTextBlockStyle}"></TextBlock>
-                                    <TextBlock Text="{x:Bind singer}" Style="{ThemeResource CaptionTextBlockStyle}"></TextBlock>
+                                    <TextBlock x:ConnectionId='10'                      Style="{ThemeResource BaseTextBlockStyle}"></TextBlock>
+                                    <TextBlock x:ConnectionId='11'                        Style="{ThemeResource CaptionTextBlockStyle}"></TextBlock>
                                 </StackPanel>
                             </StackPanel>
                         </DataTemplate>
@@ -32,16 +32,17 @@
             </StackPanel>
         </ScrollViewer>
         <StackPanel VerticalAlignment="Bottom">
-            <MediaElement x:Name="MyMediaPlayer"/>
+            <MediaElement x:ConnectionId='2' x:Name="MyMediaPlayer"/>
             <CommandBar>
                 <AppBarSeparator/>
-                <AppBarButton x:Name="PreviousButton" Icon="Previous" Label="Previous" Click="PreviousButton_OnClick"/>
-                <AppBarButton x:Name="StatusButton" Icon="Play" Label="Play" Click="StatusButton_OnClick"/>
-                <AppBarButton x:Name="NextButton" Icon="Next" Label="Next" Click="NextButton_OnClick"/>
+                <AppBarButton x:ConnectionId='3' x:Name="PreviousButton" Icon="Previous" Label="Previous"                               />
+                <AppBarButton x:ConnectionId='4' x:Name="StatusButton" Icon="Play" Label="Play"                             />
+                <AppBarButton x:ConnectionId='5' x:Name="NextButton" Icon="Next" Label="Next"                           />
                 <CommandBar.Content>
-                    <TextBlock x:Name="ControlLabel" Text="Please choose a song." Margin="12,14"/>
+                    <TextBlock x:ConnectionId='6' x:Name="ControlLabel" Text="Please choose a song." Margin="12,14"/>
                 </CommandBar.Content>
             </CommandBar>
         </StackPanel>
     </Grid>
 </Page>
+

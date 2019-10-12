@@ -11,6 +11,6 @@ namespace HelloUWP.Service
     {
         String Login(String email, String password);
         Member Register(Member member);
-        Member GetInformation(String token);
+        Member GetInformation();
     }
 }

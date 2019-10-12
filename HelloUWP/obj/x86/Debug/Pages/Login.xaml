@@ -10,8 +10,8 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Center">
-            <TextBox x:ConnectionId='2' x:Name="Email" Header= "Email" Margin="0,24,0,0" MaxLength="32" Width="400" />
-            <PasswordBox x:ConnectionId='3' x:Name="Password" Header="Password" Margin="0,24,0,0" MaxLength="15" Width="400" />
+            <TextBox x:ConnectionId='2' x:Name="Email" Header= "Email" Margin="0,24,0,0" MaxLength="50" Width="400" />
+            <PasswordBox x:ConnectionId='3' x:Name="Password" Header="Password" Margin="0,24,0,0" Width="400" />
             <Grid HorizontalAlignment="Center" Margin="0,30">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>

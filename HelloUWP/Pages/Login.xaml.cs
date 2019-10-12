@@ -35,6 +35,7 @@ namespace HelloUWP.Pages
         public Login()
         {
             this.InitializeComponent();
+            memberService = new MemberServiceIpm();
         }
 
         private void ButtonLogin_OnClick(object sender, RoutedEventArgs e)

@@ -45,7 +45,7 @@ namespace HelloUWP.Pages
             this.memberService = new MemberServiceIpm();
         }
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        private void ButtonRegister_OnClick(object sender, RoutedEventArgs e)
         {
             var member = new Member
             {
@@ -60,19 +60,113 @@ namespace HelloUWP.Pages
                 email = this.email.Text,
                 password = this.password.Password
             };
-            // validate phía client.
-            Debug.WriteLine(JsonConvert.SerializeObject(member));
 
-            member = memberService.Register(member);
-            if (member == null)
+            Dictionary<String, String> errors = member.Validate();
+            if (errors.Count == 0)
             {
-                // show error
+                member = memberService.Register(member);
+                if (member == null)
+                {
+                    // show error
+                }
+                else
+                {
+                    // show success
+                }
             }
             else
             {
-                // show success
+                if (errors.ContainsKey("firstName"))
+                {
+                    errorFirstName.Text = errors["firstName"];
+                    errorFirstName.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorFirstName.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("lastName"))
+                {
+                    errorLastName.Text = errors["lastName"];
+                    errorLastName.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorLastName.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("avatar"))
+                {
+                    errorAvatar.Text = errors["avatar"];
+                    errorAvatar.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorAvatar.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("phone"))
+                {
+                    errorPhone.Text = errors["phone"];
+                    errorPhone.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorPhone.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("birthday"))
+                {
+                    errorBirthday.Text = errors["birthday"];
+                    errorBirthday.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorBirthday.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("address"))
+                {
+                    errorAddress.Text = errors["address"];
+                    errorAddress.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorAddress.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("email"))
+                {
+                    errorEmail.Text = errors["email"];
+                    errorEmail.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorEmail.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("password"))
+                {
+                    errorPassword.Text = errors["password"];
+                    errorPassword.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorPassword.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("introduction"))
+                {
+                    errorIntroduction.Text = errors["introduction"];
+                    errorIntroduction.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorIntroduction.Visibility = Visibility.Collapsed;
+                }
+                if (this.gender_male.IsChecked == false && this.gender_female.IsChecked == false)
+                {
+                    errorGender.Text = "Gender is not selected!";
+                    errorGender.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    errorGender.Visibility = Visibility.Collapsed;
+                }
             }
-
         }
 
         private async void ButtonImage_OnClick(object sender, RoutedEventArgs e)
@@ -180,6 +274,30 @@ namespace HelloUWP.Pages
         private void RadioButtonFemale_OnChecked(object sender, RoutedEventArgs e)
         {
             sex = 0;
+        }
+
+        private void ButtonReset_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.firstName.Text = string.Empty;
+            errorFirstName.Visibility = Visibility.Collapsed;
+            this.lastName.Text = string.Empty;
+            errorLastName.Visibility = Visibility.Collapsed;
+            this.email.Text = string.Empty;
+            errorEmail.Visibility = Visibility.Collapsed;
+            this.password.Password = string.Empty;
+            errorPassword.Visibility = Visibility.Collapsed;
+            this.birthday.Text = string.Empty;
+            errorBirthday.Visibility = Visibility.Collapsed;
+            this.phone.Text = string.Empty;
+            errorPhone.Visibility = Visibility.Collapsed;
+            this.address.Text = string.Empty;
+            errorAddress.Visibility = Visibility.Collapsed;
+            this.introduction.Text = string.Empty;
+            errorIntroduction.Visibility = Visibility.Collapsed;
+            this.gender_male.IsChecked = false;
+            this.gender_female.IsChecked = false;
+            errorGender.Visibility = Visibility.Collapsed;
+            errorAvatar.Visibility = Visibility.Collapsed;
         }
     }
 }

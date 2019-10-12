@@ -18,5 +18,47 @@ namespace HelloUWP.Entity
         public string birthday { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+
+        public Dictionary<string, string> Validate()
+        {
+            var errors = new Dictionary<string, string>();
+            if (string.IsNullOrEmpty(firstName))
+            {
+                errors.Add("firstName", "FirstName is required!");
+            }
+            if (string.IsNullOrEmpty(lastName))
+            {
+                errors.Add("lastName", "LastName is required!");
+            }
+            if (string.IsNullOrEmpty(avatar))
+            {
+                errors.Add("avatar", "Avatar is required!");
+            }
+            if (string.IsNullOrEmpty(phone))
+            {
+                errors.Add("phone", "Phone is required!");
+            }
+            if (string.IsNullOrEmpty(birthday))
+            {
+                errors.Add("birthday", "Birthday is required!");
+            }
+            if (string.IsNullOrEmpty(address))
+            {
+                errors.Add("address", "Address is required!");
+            }
+            if (string.IsNullOrEmpty(email))
+            {
+                errors.Add("email", "Email is required!");
+            }
+            if (string.IsNullOrEmpty(password))
+            {
+                errors.Add("password", "Password is required!");
+            }
+            if (string.IsNullOrEmpty(introduction))
+            {
+                errors.Add("introduction", "Introduction is required!");
+            }
+            return errors;
+        }
     }
 }

@@ -9,14 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <ScrollViewer Margin="20" HorizontalAlignment="Center">
-        <StackPanel>
-            <StackPanel Margin="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <StackPanel Margin="100,0">
+            <StackPanel Margin="0,0,0,30" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <TextBox x:Name="name" Header= "Name" Margin="0,24,0,0" PlaceholderText="name" MaxLength="50" Width="400" />
                 <TextBlock x:Name="errorName" Visibility="Collapsed" Foreground="Red"/>
                 <TextBox x:Name="description" Header="Description" Margin="0,20,0,0" PlaceholderText="description" MaxLength="50" Width="400" />
                 <TextBox x:Name="singer" Header="Singer" Margin="0,24,0,0" PlaceholderText="singer" MaxLength="50" Width="400"  />
                 <TextBox x:Name="author" Header="Author"  Margin="0,24,0,0" PlaceholderText="author" MaxLength="50" Width="400"  />
-                <TextBox x:Name="thumbnail" Header="Thumbnail"  Margin="0,24,0,0" PlaceholderText="thumbnail" MaxLength="50" Width="400"  />
+                <TextBox x:Name="thumbnail" Header="Thumbnail"  Margin="0,24,0,0" PlaceholderText="thumbnail" Width="400"  />
                 <TextBlock x:Name="errorThumbnail" Visibility="Collapsed" Foreground="Red"/>
                 <TextBox x:Name="link" Header="Link"  Margin="0,20,0,0" PlaceholderText="link" Width="400"  />
                 <TextBlock x:Name="errorLink" Visibility="Collapsed" Foreground="Red"/>

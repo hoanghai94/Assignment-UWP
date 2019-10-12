@@ -132,6 +132,9 @@
     <Compile Include="Pages\Information.xaml.cs">
       <DependentUpon>Information.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MySong.xaml.cs">
+      <DependentUpon>MySong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SongForm.xaml.cs">
       <DependentUpon>SongForm.xaml</DependentUpon>
     </Compile>
@@ -195,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MasterLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MySong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

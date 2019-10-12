@@ -8,5 +8,6 @@ namespace HelloUWP.Service
         Song PostSongFree(Song song);
 
         ObservableCollection<Song> GetFreeSongs();
+        ObservableCollection<Song> GetMySongs();
     }
 }

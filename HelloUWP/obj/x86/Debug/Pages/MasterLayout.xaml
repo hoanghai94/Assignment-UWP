@@ -16,14 +16,26 @@
             <NavigationView.MenuItems>
                 <NavigationViewItem Tag="home" Icon="Home" Content="Home"/>
                 <NavigationViewItemSeparator/>
-                <NavigationViewItemHeader x:ConnectionId='3' x:Name="MainPagesHeader" Content="Main pages"/>
-                <NavigationViewItem Tag="list_song" Icon="Audio" Content="List Song"/>
-                <NavigationViewItem Tag="music" Icon="Audio" Content="Music"/>
+                <NavigationViewItemHeader x:ConnectionId='3' x:Name="MainPagesHeader" Content="Music Box"/>
+                <NavigationViewItem Tag="music" Content="Upload">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE898;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Tag="list_song" Content="New Song">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE90B;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Tag="my_song" Icon="Audio" Content="My Song"/>
                 <NavigationViewItemSeparator/>
-                <NavigationViewItem Tag="register" Icon="AddFriend" Content="Register"/>
                 <NavigationViewItem Tag="login" Icon="Contact" Content="Login"/>
-                <NavigationViewItemSeparator/>
-                <NavigationViewItem Tag="information" Icon="Contact" Content="Information"/>
+                <NavigationViewItem Tag="register" Icon="AddFriend" Content="Register"/>
+                <NavigationViewItem Tag="information" Content="Information">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEA4A;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
 
             <NavigationView.AutoSuggestBox>
@@ -32,10 +44,8 @@
                 <AutoSuggestBox x:ConnectionId='4' x:Name="NavViewSearchBox" QueryIcon="Find"/>
             </NavigationView.AutoSuggestBox>
 
-            <ScrollViewer>
-                <Frame x:ConnectionId='5' x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
-                                                                       />
-            </ScrollViewer>
+            <Frame x:ConnectionId='5' x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
+                                                                    Width="1170"/>
         </NavigationView>
 
         <VisualStateManager.VisualStateGroups>

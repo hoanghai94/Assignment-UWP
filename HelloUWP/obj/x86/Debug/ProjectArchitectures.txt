@@ -1,1 +1,1 @@
-C:\Users\Admin\source\repos\HelloUWP\HelloUWP\HelloUWP.csproj;x86
+C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\HelloUWP.csproj;x86

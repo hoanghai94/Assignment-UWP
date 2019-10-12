@@ -21,8 +21,8 @@
     <RootType FullName="HelloUWP.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Tag" />
@@ -52,10 +52,10 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Style" />
       <RootProperty Name="Inlines" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Foreground" />
     </RootType>
@@ -65,12 +65,26 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="HelloUWP.Pages.FileHandle" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+    <RootType FullName="Windows.UI.Xaml.Controls.PersonPicture">
       <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Bold">
+      <RootProperty Name="Inlines" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Span">
+      <RootProperty Name="Inlines" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run" />
+    <RootType FullName="HelloUWP.Pages.Information" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
-    <RootType FullName="HelloUWP.Pages.Information" />
     <RootType FullName="Windows.UI.Xaml.Controls.MediaElement" />
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="PrimaryCommands" />
@@ -83,10 +97,8 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
@@ -96,6 +108,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Fill" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
     </RootType>
@@ -127,12 +140,17 @@
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItemHeader">
       <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Glyph" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
       <RootProperty Name="QueryIcon" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame">
       <RootProperty Name="Padding" />
       <RootProperty Name="IsTabStop" />
+      <RootProperty Name="Width" />
       <RootEvent Name="NavigationFailed" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.VisualStateGroup">
@@ -150,6 +168,7 @@
       <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="HelloUWP.Pages.MasterLayout" />
+    <RootType FullName="HelloUWP.Pages.MySong" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Children" />
       <RootMethod Name="GetRightOf" />

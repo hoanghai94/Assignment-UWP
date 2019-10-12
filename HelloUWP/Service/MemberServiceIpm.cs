@@ -52,10 +52,11 @@ namespace HelloUWP.Service
                 HttpContent content = new StringContent(JsonConvert.SerializeObject(member), Encoding.UTF8,
                     "application/json");
 
-                var httpRequestMessage = httpClient.PostAsync(ApiUrl.BASE_URL, content);
+                var httpRequestMessage = httpClient.PostAsync(ApiUrl.REGISTER_URL, content);
                 var responseContent = httpRequestMessage.Result.Content.ReadAsStringAsync().Result;
                 // parse member object
                 var resMember = JsonConvert.DeserializeObject<Member>(responseContent);
+                Debug.WriteLine(responseContent);
                 return resMember;
             }
             catch (Exception e)
@@ -65,12 +66,12 @@ namespace HelloUWP.Service
             }
         }
 
-        public Member GetInformation(string token)
+        public Member GetInformation()
         {
             // read file.
             Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             Windows.Storage.StorageFile sampleFile = storageFolder.GetFileAsync("sample.txt").GetAwaiter().GetResult();
-            token = Windows.Storage.FileIO.ReadTextAsync(sampleFile).GetAwaiter().GetResult();
+            String token = Windows.Storage.FileIO.ReadTextAsync(sampleFile).GetAwaiter().GetResult();
             Debug.WriteLine(token);
 
             var client = new HttpClient();
@@ -78,7 +79,7 @@ namespace HelloUWP.Service
             var responseContent = client.GetAsync(ApiUrl.INFORMATION_URL).Result.Content.ReadAsStringAsync().Result;
             var jsonJObject = JObject.Parse(responseContent);
             Debug.WriteLine(jsonJObject["email"]);
-            return null;
+            return JsonConvert.DeserializeObject<Member>(responseContent);
         }
 
         private string GetTokenFromApi(MemberLogin memberLogin)
@@ -99,7 +100,7 @@ namespace HelloUWP.Service
         private void SaveTokenToLocalStorage(string token)
         {
             Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-            Windows.Storage.StorageFile sampleFile = storageFolder.CreateFileAsync("abcdz.txt",
+            Windows.Storage.StorageFile sampleFile = storageFolder.CreateFileAsync("sample.txt",
                 Windows.Storage.CreationCollisionOption.ReplaceExisting).GetAwaiter().GetResult();
             Windows.Storage.FileIO.WriteTextAsync(sampleFile, token).GetAwaiter().GetResult();
         }

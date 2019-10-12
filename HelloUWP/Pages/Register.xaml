@@ -8,38 +8,56 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <ScrollViewer Margin="30">
+    <ScrollViewer Margin="100, 20" HorizontalAlignment="Center">
         <StackPanel>
             <RelativePanel>
-                <StackPanel x:Name="Customer" Margin="180,10,20,20">
-                    <TextBox x:Name="firstName" Header= "First Name" Margin="0,24,0,0" PlaceholderText="first name" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                    <TextBox x:Name="email" Header="Email" Margin="0,24,0,0" PlaceholderText="email" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
-                    <TextBox x:Name="birthday" Header="Birthday" Margin="0,24,0,0" PlaceholderText="yyyy-mm-dd" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
-                    <TextBox x:Name="phone" Header="Phone"  Margin="0,24,0,0" PlaceholderText="Phone number" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
-                    <TextBox x:Name="address" Header="Address" PlaceholderText="Address" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+                <StackPanel x:Name="Customer" Margin="0,10,20,20">
+                    <TextBox x:Name="firstName" Header= "First Name" Margin="0,24,0,0" PlaceholderText="first name" MaxLength="32" Width="300" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                    <TextBlock x:Name="errorFirstName" Visibility="Collapsed" Foreground="Red"/>
+                    <TextBox x:Name="email" Header="Email" Margin="0,24,0,0" PlaceholderText="email" MaxLength="50" Width="300" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+                    <TextBlock x:Name="errorEmail" Visibility="Collapsed" Foreground="Red"/>
+                    <TextBox x:Name="birthday" Header="Birthday" Margin="0,24,0,0" PlaceholderText="yyyy-mm-dd" MaxLength="50" Width="300" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+                    <TextBlock x:Name="errorBirthday" Visibility="Collapsed" Foreground="Red"/>
+                    <TextBox x:Name="phone" Header="Phone"  Margin="0,24,0,0" PlaceholderText="Phone number" MaxLength="50" Width="300" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+                    <TextBlock x:Name="errorPhone" Visibility="Collapsed" Foreground="Red"/>
+                    <TextBox x:Name="address" Header="Address" PlaceholderText="Address" Margin="0,24,0,0" MaxLength="50" Width="300" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+                    <TextBlock x:Name="errorAddress" Visibility="Collapsed" Foreground="Red"/>
                 </StackPanel>
                 <StackPanel x:Name="Associate" Margin="20, 10" RelativePanel.RightOf="Customer">
-                    <TextBox x:Name="lastName" Header= "Last Name" PlaceholderText="last name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                    <PasswordBox x:Name="password" Header="Password" PlaceholderText="password" Margin="0,24,0,0" MaxLength="15" Width="400" HorizontalAlignment="Left" InputScope="TelephoneNumber" />
+                    <TextBox x:Name="lastName" Header= "Last Name" PlaceholderText="last name" Margin="0,24,0,0" MaxLength="32" Width="300" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                    <TextBlock x:Name="errorLastName" Visibility="Collapsed" Foreground="Red"/>
+                    <PasswordBox x:Name="password" Header="Password" PlaceholderText="password" Margin="0,24,0,0" MaxLength="15" Width="300" HorizontalAlignment="Left" InputScope="TelephoneNumber" />
+                    <TextBlock x:Name="errorPassword" Visibility="Collapsed" Foreground="Red"/>
                     <StackPanel Margin="0,24,0,0">
                         <TextBlock Text="Gender" />
                         <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
                             <RadioButton x:Name="gender_male" Content="Male" Tag="1" Checked="RadioButtonMale_OnChecked"/>
                             <RadioButton x:Name="gender_female" Content="Female" Tag="0" Checked="RadioButtonFemale_OnChecked"/>
                         </StackPanel>
+                        <TextBlock x:Name="errorGender" Visibility="Collapsed" Foreground="Red"/>
                     </StackPanel>
-                    <TextBox x:Name="introduction" Header="Introduction"  Margin="0,24,0,0" PlaceholderText="Introduction" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+                    <TextBox x:Name="introduction" Header="Introduction"  Margin="0,24,0,0" PlaceholderText="Introduction" MaxLength="50" Width="300" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+                    <TextBlock x:Name="errorIntroduction" Visibility="Collapsed" Foreground="Red"/>
                     <StackPanel Margin="0,24,0,0">
                         <TextBlock>Avatar</TextBlock>
-                        <Button Content="Choose image" Margin="0,5,0,0" Click="ButtonImage_OnClick" />
-                        <TextBlock x:Name="ImageUrl"></TextBlock>
-                        <Image x:Name="ImageControl" Margin="0,10" Width="200" Height="200"/>
+                        <Button Content="Capture image" Margin="0,5,0,0" Click="ButtonImage_OnClick" />
+                        <TextBlock x:Name="errorAvatar" Visibility="Collapsed" Foreground="Red"/>
+                        <TextBlock x:Name="ImageUrl" Visibility="Collapsed"></TextBlock>
+                        <Image x:Name="ImageControl" Margin="0,20" Width="150"/>
                     </StackPanel>
                 </StackPanel>
             </RelativePanel>
-            <StackPanel Orientation="Horizontal" Margin="500,0">
-                <Button Content="Register" Margin="0,15" Click="ButtonBase_OnClick"/>
-            </StackPanel>
+            <Grid HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MaxWidth="200"/>
+                    <ColumnDefinition MaxWidth="200"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Margin="0,0,20,0" Click="ButtonRegister_OnClick">Register</Button>
+                <Button Grid.Row="0" Grid.Column="1" Click="ButtonReset_OnClick">Reset</Button>
+            </Grid>
         </StackPanel>
     </ScrollViewer>
 </Page>
