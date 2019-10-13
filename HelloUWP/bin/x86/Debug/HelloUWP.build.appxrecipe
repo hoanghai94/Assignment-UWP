@@ -79,6 +79,9 @@
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\FileHandle.xbf">
       <PackagePath>Pages\FileHandle.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\HomePage.xbf">
+      <PackagePath>Pages\HomePage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\Information.xbf">
       <PackagePath>Pages\Information.xbf</PackagePath>
     </AppxPackagedFile>

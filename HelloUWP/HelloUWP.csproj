@@ -129,6 +129,9 @@
     <Compile Include="Pages\FileHandle.xaml.cs">
       <DependentUpon>FileHandle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Information.xaml.cs">
       <DependentUpon>Information.xaml</DependentUpon>
     </Compile>
@@ -182,6 +185,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\FileHandle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

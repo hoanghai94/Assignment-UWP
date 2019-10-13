@@ -165,3 +165,8 @@ C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\obj\x86\Debug\Pages\MySong.g
 C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\obj\x86\Debug\Pages\MySong.g.cs
 C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\obj\x86\Debug\Pages\MySong.xaml
 C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\obj\x86\Debug\Pages\MySong.xbf
+C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\bin\x86\Debug\Pages\HomePage.xbf
+C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\obj\x86\Debug\Pages\HomePage.g.i.cs
+C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\obj\x86\Debug\Pages\HomePage.g.cs
+C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\obj\x86\Debug\Pages\HomePage.xaml
+C:\Users\Admin\source\repos\Assignment-UWP\HelloUWP\obj\x86\Debug\Pages\HomePage.xbf

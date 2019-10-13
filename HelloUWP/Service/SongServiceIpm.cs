@@ -25,7 +25,7 @@ namespace HelloUWP.Service
                 HttpContent content = new StringContent(JsonConvert.SerializeObject(song), Encoding.UTF8,
                     "application/json");
 
-                Task<HttpResponseMessage> httpRequestMessage = httpClient.PostAsync(ApiUrl.POST_FREE_SONG_URL, content);
+                Task<HttpResponseMessage> httpRequestMessage = httpClient.PostAsync(ApiUrl.SONG_URL, content);
                 String responseContent = httpRequestMessage.Result.Content.ReadAsStringAsync().Result;
                 Debug.WriteLine(responseContent);
 
@@ -43,9 +43,10 @@ namespace HelloUWP.Service
         public ObservableCollection<Song> GetFreeSongs()
         {
             ObservableCollection<Song> songs = new ObservableCollection<Song>();
-            // thực hiện request lên api lấy token về.
+            string token = GetTokenFromLocalStorage();
             var client = new HttpClient();
-            var responseContent = client.GetAsync(ApiUrl.GET_FREE_SONG_URL).Result.Content.ReadAsStringAsync().Result;
+            client.DefaultRequestHeaders.Add("Authorization", "Basic " + token);
+            var responseContent = client.GetAsync(ApiUrl.SONG_URL).Result.Content.ReadAsStringAsync().Result;
             songs = JsonConvert.DeserializeObject<ObservableCollection<Song>>(responseContent);
             return songs;
         }

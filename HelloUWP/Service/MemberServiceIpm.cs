@@ -48,7 +48,6 @@ namespace HelloUWP.Service
             try
             {
                 var httpClient = new HttpClient();
-                //httpClient.DefaultRequestHeaders.Add("Authorization", "Basic " + token);
                 HttpContent content = new StringContent(JsonConvert.SerializeObject(member), Encoding.UTF8,
                     "application/json");
 
@@ -68,12 +67,7 @@ namespace HelloUWP.Service
 
         public Member GetInformation()
         {
-            // read file.
-            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-            Windows.Storage.StorageFile sampleFile = storageFolder.GetFileAsync("sample.txt").GetAwaiter().GetResult();
-            String token = Windows.Storage.FileIO.ReadTextAsync(sampleFile).GetAwaiter().GetResult();
-            Debug.WriteLine(token);
-
+            string token = GetTokenFromLocalStorage();
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Authorization", "Basic " + token);
             var responseContent = client.GetAsync(ApiUrl.INFORMATION_URL).Result.Content.ReadAsStringAsync().Result;
@@ -108,6 +102,14 @@ namespace HelloUWP.Service
         private bool ValidateMemberLogin(MemberLogin memberLogin)
         {
             return true;
+        }
+
+        private string GetTokenFromLocalStorage()
+        {
+            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFile sampleFile = storageFolder.GetFileAsync("sample.txt").GetAwaiter().GetResult();
+            String token = Windows.Storage.FileIO.ReadTextAsync(sampleFile).GetAwaiter().GetResult();
+            return token;
         }
     }
 }

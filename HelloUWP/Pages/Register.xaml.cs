@@ -76,96 +76,7 @@ namespace HelloUWP.Pages
             }
             else
             {
-                if (errors.ContainsKey("firstName"))
-                {
-                    errorFirstName.Text = errors["firstName"];
-                    errorFirstName.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorFirstName.Visibility = Visibility.Collapsed;
-                }
-                if (errors.ContainsKey("lastName"))
-                {
-                    errorLastName.Text = errors["lastName"];
-                    errorLastName.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorLastName.Visibility = Visibility.Collapsed;
-                }
-                if (errors.ContainsKey("avatar"))
-                {
-                    errorAvatar.Text = errors["avatar"];
-                    errorAvatar.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorAvatar.Visibility = Visibility.Collapsed;
-                }
-                if (errors.ContainsKey("phone"))
-                {
-                    errorPhone.Text = errors["phone"];
-                    errorPhone.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorPhone.Visibility = Visibility.Collapsed;
-                }
-                if (errors.ContainsKey("birthday"))
-                {
-                    errorBirthday.Text = errors["birthday"];
-                    errorBirthday.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorBirthday.Visibility = Visibility.Collapsed;
-                }
-                if (errors.ContainsKey("address"))
-                {
-                    errorAddress.Text = errors["address"];
-                    errorAddress.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorAddress.Visibility = Visibility.Collapsed;
-                }
-                if (errors.ContainsKey("email"))
-                {
-                    errorEmail.Text = errors["email"];
-                    errorEmail.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorEmail.Visibility = Visibility.Collapsed;
-                }
-                if (errors.ContainsKey("password"))
-                {
-                    errorPassword.Text = errors["password"];
-                    errorPassword.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorPassword.Visibility = Visibility.Collapsed;
-                }
-                if (errors.ContainsKey("introduction"))
-                {
-                    errorIntroduction.Text = errors["introduction"];
-                    errorIntroduction.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorIntroduction.Visibility = Visibility.Collapsed;
-                }
-                if (this.gender_male.IsChecked == false && this.gender_female.IsChecked == false)
-                {
-                    errorGender.Text = "Gender is not selected!";
-                    errorGender.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorGender.Visibility = Visibility.Collapsed;
-                }
+                ValidateRegister(errors);
             }
         }
 
@@ -276,6 +187,100 @@ namespace HelloUWP.Pages
             sex = 0;
         }
 
+        private void ValidateRegister(Dictionary<string, string> errors)
+        {
+            if (errors.ContainsKey("firstName"))
+            {
+                errorFirstName.Text = errors["firstName"];
+                errorFirstName.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorFirstName.Visibility = Visibility.Collapsed;
+            }
+            if (errors.ContainsKey("lastName"))
+            {
+                errorLastName.Text = errors["lastName"];
+                errorLastName.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorLastName.Visibility = Visibility.Collapsed;
+            }
+            if (errors.ContainsKey("avatar"))
+            {
+                errorAvatar.Text = errors["avatar"];
+                errorAvatar.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorAvatar.Visibility = Visibility.Collapsed;
+            }
+            if (errors.ContainsKey("phone"))
+            {
+                errorPhone.Text = errors["phone"];
+                errorPhone.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorPhone.Visibility = Visibility.Collapsed;
+            }
+            if (errors.ContainsKey("birthday"))
+            {
+                errorBirthday.Text = errors["birthday"];
+                errorBirthday.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorBirthday.Visibility = Visibility.Collapsed;
+            }
+            if (errors.ContainsKey("address"))
+            {
+                errorAddress.Text = errors["address"];
+                errorAddress.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorAddress.Visibility = Visibility.Collapsed;
+            }
+            if (errors.ContainsKey("email"))
+            {
+                errorEmail.Text = errors["email"];
+                errorEmail.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorEmail.Visibility = Visibility.Collapsed;
+            }
+            if (errors.ContainsKey("password"))
+            {
+                errorPassword.Text = errors["password"];
+                errorPassword.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorPassword.Visibility = Visibility.Collapsed;
+            }
+            if (errors.ContainsKey("introduction"))
+            {
+                errorIntroduction.Text = errors["introduction"];
+                errorIntroduction.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorIntroduction.Visibility = Visibility.Collapsed;
+            }
+            if (this.gender_male.IsChecked == false && this.gender_female.IsChecked == false)
+            {
+                errorGender.Text = "Gender is not selected!";
+                errorGender.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorGender.Visibility = Visibility.Collapsed;
+            }
+        }
+
         private void ButtonReset_OnClick(object sender, RoutedEventArgs e)
         {
             this.firstName.Text = string.Empty;
@@ -297,6 +302,8 @@ namespace HelloUWP.Pages
             this.gender_male.IsChecked = false;
             this.gender_female.IsChecked = false;
             errorGender.Visibility = Visibility.Collapsed;
+            this.ImageUrl.Text = string.Empty;
+            //this.ImageControl.Visibility = Visibility.Collapsed;
             errorAvatar.Visibility = Visibility.Collapsed;
         }
     }

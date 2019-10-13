@@ -37,7 +37,7 @@ namespace HelloUWP.Pages
 
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
         {
-            ("home", typeof(MainPage)),
+            ("home", typeof(HomePage)),
             ("my_song", typeof(MySong)),
             ("list_song", typeof(ListSong)),
             ("music", typeof(SongForm)),

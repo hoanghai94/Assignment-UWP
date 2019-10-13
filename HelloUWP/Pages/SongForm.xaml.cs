@@ -50,49 +50,54 @@ namespace HelloUWP.Pages
             }
             else
             {
-                if (errors.ContainsKey("name"))
-                {
-                    errorName.Text = errors["name"];
-                    errorName.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorName.Visibility = Visibility.Collapsed;
-                }
-                if (errors.ContainsKey("thumbnail"))
-                {
-                    errorThumbnail.Text = errors["thumbnail"];
-                    errorThumbnail.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorThumbnail.Visibility = Visibility.Collapsed;
-
-                }
-                if (errors.ContainsKey("link"))
-                {
-                    errorLink.Text = errors["link"];
-                    errorLink.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    errorLink.Visibility = Visibility.Collapsed;
-
-                }
+                ValidateUploadSong(errors);
             }
         }
 
         private void ButtonReset_OnClick(object sender, RoutedEventArgs e)
         {
             this.name.Text = string.Empty;
-            this.errorName.Text = string.Empty;
+            errorName.Visibility = Visibility.Collapsed;
             this.description.Text = string.Empty;
             this.singer.Text = string.Empty;
             this.author.Text = string.Empty;
             this.thumbnail.Text = string.Empty;
-            this.errorThumbnail.Text = string.Empty;
+            errorThumbnail.Visibility = Visibility.Collapsed;
             this.link.Text = string.Empty;
-            this.errorLink.Text = string.Empty;
+            errorLink.Visibility = Visibility.Collapsed;
+        }
+
+        private void ValidateUploadSong(Dictionary<string, string> errors)
+        {
+            if (errors.ContainsKey("name"))
+            {
+                errorName.Text = errors["name"];
+                errorName.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorName.Visibility = Visibility.Collapsed;
+            }
+            if (errors.ContainsKey("thumbnail"))
+            {
+                errorThumbnail.Text = errors["thumbnail"];
+                errorThumbnail.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorThumbnail.Visibility = Visibility.Collapsed;
+
+            }
+            if (errors.ContainsKey("link"))
+            {
+                errorLink.Text = errors["link"];
+                errorLink.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errorLink.Visibility = Visibility.Collapsed;
+
+            }
         }
     }
 }

@@ -65,6 +65,10 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="HelloUWP.Pages.FileHandle" />
+    <RootType FullName="Windows.UI.Xaml.Controls.WebView">
+      <RootProperty Name="Source" />
+    </RootType>
+    <RootType FullName="HelloUWP.Pages.HomePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.PersonPicture">
       <RootProperty Name="Margin" />
     </RootType>
